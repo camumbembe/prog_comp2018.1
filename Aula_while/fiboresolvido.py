@@ -1,9 +1,6 @@
 quantidade = int(input('Informe quantos números da sequência de fibonacci você deseja conhecer: '))
 
 penultimo = 0
-
-print(penultimo)
-
 ultimo = 1
 
 print(ultimo)
