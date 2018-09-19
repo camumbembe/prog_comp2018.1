@@ -4,11 +4,10 @@ quantidade = int(input('Informe quantos números da sequência de fibonacci voc�
 penultimo = 0
 ultimo = 1
 
-print(ultimo)
+#print(ultimo)
 
-for elemento in range(1, quantidade):
+for elemento in range(1, quantidade+1):
 	proximo = penultimo + ultimo
-	print(proximo)
 	penultimo = ultimo
 	ultimo = proximo
-	
+	print(penultimo)
