@@ -13,14 +13,21 @@ while contador < 5:
 	contador += 1
 print(strSenhaPadrao)
 
-for element in strSenhaPadrao:
-	if strSenhaPadrao in numero:
+for strSenhaPadrao in range(5):
+	if element in numero:
+		check +=1
+	elif element in letra:
+		check +=1
+	elif element in caracter:
 		check +=1
 	else:
 		check -= 1
 print(check)
 		
-	
+if check > 1:
+	print('')
+else:
+	strSenhaPadrao = input('Informe sua senha novamente:')
 
 
 if len(strSenhaPadrao) != 5:
