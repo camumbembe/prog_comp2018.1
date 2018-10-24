@@ -1,39 +1,40 @@
-def makinglist(numbername, listname, lenlist, inicial, final):
-	numbername = random.randint(inicial, final)
-	if numbername not in listname and lenlist <= 5:
-		listname.append(numbername)
-        
 import random
+from os import system 
 
-lista_b = []
-lista_i = []
-lista_n = []
-lista_g = []
-lista_o = []
-numero_b = numero_i = numero_n = numero_g = numero_o = None
+system('clear')
 
+lista_bingo = []
+number = None
 
-while True:
-	
-	makinglist(numero_b, lista_b, len(lista_b), 1, 15)  
-
-	numero_i = random.randint(16,30)
-	makinglist(numero_i, lista_i, len(lista_i))
-
-	numero_n = random.randint(31,45)
-	makinglist(numero_n, lista_n, len(lista_n))
-
-	numero_g = random.randint(46,60)
-	makinglist(numero_g, lista_g, len(lista_g))
-
-	numero_o = random.randint(61,75)
-	makinglist(numero_o, lista_o, len(lista_o))
+def makinglist(inicial, final):
+	lista = []
+	while True:
+		number = random.randint(inicial, final)
+		if (number not in lista) and (len(lista) <= 5):
+			lista.append(number)
+		if (len(lista) == 5):
+			lista.sort()
+			lista_bingo.append(lista)
+			break			
+	# return lista
 
 
-	if (len(lista_b) == 5) and (len(lista_i) == 5) and (len(lista_n) == 5) and (len(lista_g) == 5) and (len(lista_o) == 5):
-		break
-print(lista_b)
-print(lista_i)
-print(lista_n)
-print(lista_g)
-print(lista_o)
+makinglist(1, 15)  
+makinglist(16,30)
+makinglist(31,45)
+makinglist(46,60)
+makinglist(61,75)
+
+contador = 0
+
+print(" +-----+-----+-----+-----+-----+ \n |  B  |  I  |  N  |  G  |  O  | \n +-----+-----+-----+-----+-----+ ")
+while (contador < 5):
+	print(" |", end ='')
+	for listas in lista_bingo:
+		print(" {num:02d}".format(num= listas[contador]), end="  |")
+	contador+= 1
+
+	print("\n +-----+-----+-----+-----+-----+")
+
+
+
