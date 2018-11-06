@@ -3,6 +3,8 @@ from os import system
 
 system('clear')
 
+arquivo = open('cartela.txt', 'w')
+
 lista_bingo = []
 number = None
 
