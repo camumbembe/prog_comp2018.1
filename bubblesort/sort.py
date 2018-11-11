@@ -8,9 +8,7 @@ lista = []
 for element in range(0, n):	
     lista.append(random.randint(1,50))
 
-
 print(lista)
-
 
 a = 1
 contador = 0
