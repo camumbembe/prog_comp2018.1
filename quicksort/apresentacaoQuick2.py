@@ -1,20 +1,26 @@
-from os import system
-import random
-system('clear')
+soldadoVermelho = 1
+sapo = 2
+cthulhu = 3
+espiao = 4
+minion = 5
+lucy = 6
+elefante = 7
 
-qt_iteracoes = []
+
+listaValores = [espiao, sapo, minion, soldadoVermelho, elefante, lucy, cthulhu]
+contador = []    
 
 def quickSort(lista,primeiro,ultimo,contador):
    if primeiro < ultimo:
+        #chama a função "dividir_e_organizar" e atribui o retorno dela à variavel "divisor"
        divisor = dividir_e_organizar(lista, primeiro, ultimo, contador)
 
-
+        #Chama novamente a função quickSort, criando novos frames( esquerda e direita), só que com os seguintes argumentos:
        quickSort(lista, primeiro, divisor - 1, contador)
        quickSort(lista, divisor + 1, ultimo, contador)
        
 
 def dividir_e_organizar(lista, primeiro, ultimo, contador):
-    qt_iteracoes = contador
     divisorEncontrado = False
     direcao_analise = 'pela_direita'
     pivot = primeiro
@@ -41,10 +47,14 @@ def dividir_e_organizar(lista, primeiro, ultimo, contador):
             divisorEncontrado = True
     return esquerda
 
-listaValores = [1,7,2,8,30,9,5]
-# for element in range(0, 100):	
-# 	listaValores.append(random.randint(0, 300))
-    
-    
-quickSort(listaValores, 0, (len(listaValores) - 1), qt_iteracoes)
-print('Quantidade: ',len(qt_iteracoes))
+quickSort(listaValores, 0, (len(listaValores) - 1), contador)
+qt_iteracoes = len(contador)
+
+
+dicionario = { 1 : 'soldadoVermelho', 2 : 'sapo', 3 : 'cthulhu', 4 : 'espiao',  5 : 'minion', 6 : 'lucy', 7 : 'elefante'
+}
+listaNomes = []
+for element in listaValores:
+    listaNomes.append(dicionario[element])
+
+print(listaValores, qt_iteracoes, listaNomes)
