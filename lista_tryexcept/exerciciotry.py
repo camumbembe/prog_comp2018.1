@@ -1,6 +1,7 @@
 from os import system
 system('clear')
 import random
+import sys
 
 while True:
 	try:
@@ -15,6 +16,11 @@ while True:
 		break
 	except ValueError:
 		print('Informe um valor inteiro')
+	except KeyboardInterrupt:
+		system('clear')
+		print('Programa encerrado')
+		sys.exit()
+				
 
 while True:
 	try:
@@ -24,8 +30,10 @@ while True:
 	except IndexError:
 		print('O número informado não tem correspondentes na lista')
 	except ValueError:
-		print('Informe um valor inteiro')
-		
-
+		print('Informe um valor inteiro')		
+	except KeyboardInterrupt:
+		system('clear')
+		print('Programa encerrado')
+		sys.exit()
 
 
