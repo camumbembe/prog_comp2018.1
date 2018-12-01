@@ -1,0 +1,21 @@
+Gol Linhas Aereas*Tmt8 3/5 : 182.14 364.28
+1001 Novo Rio 2/5 : 28.2 84.6
+Submarino Com 5/8 : 52.99 158.97
+215 Pague Menos 2/4 : 72.8 145.6
+Polishop 2/12 : 55.41 554.0999999999999
+Pag*Jaildsoncavalcant 2/4 : 100.0 200.0
+Gol Linhas Aereas*Iit5 5/5 : 142.29 0.0
+123 Milhas 5/6 : 250.75 250.75
+Le Biscui 2/3 : 31.65 31.65
+Mercpago 8/12 : 20.79 83.16
+Mercpago*Null 5/12 : 88.33 618.31
+Pag*Techcolor 2/2 : 75.0 0.0
+Duty Pald Rh 2/3 : 20.66 20.66
+Mercadopa 1/12 : 45.01 495.10999999999996
+Azul Linh 1/6 : 135.0 675.0
+Sympla 1/7 : 20.88 125.28
+Mercadopa 1/12 : 49.74 547.14
+Mercadopa 1/10 : 13.38 120.42
+Empreendimentos Globo 1/4 : 41.76 125.28
+Amazon-Marketplace Ama 1/10 : 83.39 750.51
+Azul Linhas Aereas Web 1/4 : 15.0 45.0
