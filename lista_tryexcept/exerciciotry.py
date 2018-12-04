@@ -20,6 +20,9 @@ while True:
 		system('clear')
 		print('Programa encerrado')
 		sys.exit()
+	except:
+		print('Erro no programa')
+
 				
 
 while True:
@@ -35,5 +38,6 @@ while True:
 		system('clear')
 		print('Programa encerrado')
 		sys.exit()
-
+	except:
+		print('Erro no programa')
 
