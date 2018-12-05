@@ -1,29 +1,55 @@
-from os import system
-system('clear')
-import random
-import sys
+from random import randint
+import os
+os.system('cls')
 
-ordenar = []
+lista = []
+
 
 try:
-	dados_pessoais = open('dados_pessoais.txt', 'r')
-	for linha in dados_pessoais:
-		dados = linha.split('#')
-		ordenar.append(dados)
-		print(dados)
+	analisar = open('dados_pessoais.txt', 'r')
+	for linha in analisar:
+		if  '\n' in linha:
+			dados = linha[:-1].split('#')
+			
+		else:
+			dados = linha.split('#')
+			
+		dados[0], dados[1] = dados[1], dados[0]	
+		lista.append(dados)
 		
+	lista.sort()
+	
+	for pessoa in lista:
+		print('Nome: {:20}Cidade: {:15}CPF: {:10}  '.format(pessoa[0], pessoa[2], pessoa[1]) ) 
+	
+	analisar.close()
 
-
-
+	
+    
 except FileNotFoundError:
-	print('Arquivo Inexistente')
-except IndexError:
-	print('O número informado não tem correspondentes na lista')
-except ValueError:
-	print('Informe um valor inteiro')		
-except KeyboardInterrupt:
-	system('clear')
-	print('Programa encerrado')
+	print('Arquivo não existe.')
+	criar = open('dadosnovos.txt', 'w')
+	while True:
+		cpf = int(input('Informe os números do CPF: '))
+		if cpf == 0:
+			break
+		nome = input('Informe o nome: ')
+		cidade = input('Informe a cidade: ')
+		
+	
+		
+		texto_arquivo = str(cpf) + '#' + nome + '#' + cidade + '\n'			
+		criar.write(texto_arquivo)
+
+
+	criar.close()	
+
+
+
+
+        
+	
+
 		
 
 
