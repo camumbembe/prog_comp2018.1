@@ -1,11 +1,35 @@
 import os
-os.system('cls')
+os.system('clear')
 
 lista = []
 
 
 try:
 	analisar = open('dados_pessoais.txt', 'r')
+	
+    
+except FileNotFoundError:
+	print('Arquivo não existe.')
+	criar = open('dados_pessoais.txt', 'w')
+	
+	while True:
+		cpf = input('Informe os números do CPF: ')
+		if int(cpf) == 0:
+			break
+		if len(cpf) != 11:
+			print('Digite um CPF válido, 11 dígitos')
+			continue
+		nome = input('Informe o nome: ')
+		cidade = input('Informe a cidade: ')
+		
+	
+		
+		texto_arquivo = str(cpf) + '#' + nome + '#' + cidade + '\n'			
+		criar.write(texto_arquivo)
+
+
+	criar.close()	
+else:
 	for linha in analisar:
 		if  '\n' in linha:
 			dados = linha[:-1].split('#')
@@ -19,26 +43,8 @@ try:
 	lista.sort()
 	
 	for pessoa in lista:
-		print('Nome: {:20}Cidade: {:15}CPF: {:10}  '.format(pessoa[0], pessoa[2], pessoa[1]) ) 
+		string_cpf = pessoa[1][:3]+ '.' + pessoa[1][3:6] + '.' + pessoa[1][6:9] + '-' + pessoa[1][9:12]
+		print('Nome: {:20}Cidade: {:15}CPF: {:10}  '.format(pessoa[0], pessoa[2], string_cpf) ) 
 	
 	analisar.close()
 
-	
-    
-except FileNotFoundError:
-	print('Arquivo não existe.')
-	criar = open('dadosnovos.txt', 'w')
-	while True:
-		cpf = int(input('Informe os números do CPF: '))
-		if cpf == 0:
-			break
-		nome = input('Informe o nome: ')
-		cidade = input('Informe a cidade: ')
-		
-	
-		
-		texto_arquivo = str(cpf) + '#' + nome + '#' + cidade + '\n'			
-		criar.write(texto_arquivo)
-
-
-	criar.close()	
