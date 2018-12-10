@@ -1,70 +1,70 @@
-Amazon.Com.Br Amazon D : 1.99
-Uber do Brasil Tecnolo : 12.77
-Sitepoint Premium : 37.48
-Uber do Brasil Tecnolo : 6.07
-Makro : 84.93
-Piazzale Italia : 169.95
-Cirne Pne : 25.0
-Sabor do Pao : 4.99
-IOF de "Sitepoint Premium" : 2.39
-Habib Nat : 21.6
-Uber do Brasil Tecnolo : 7.0
-Chocolatr : 21.0
-Medicos sem Fronteiras : 30.0
-Padaria Sabor de Pao L : 24.71
-Amazon.Com.Br Amazon D : 21.79
-Uber do Brasil Tecnolo : 6.75
-Drogasil : 50.63
-Uber do Brasil Tecnolo : 9.29
-Uber do Brasil Tecnolo : 1.0
-Microsoft : 11.45
-Supermecado Lig Zarb : 17.7
-Ame Dig-A : 15.0
-Mercado Sao Francisco : 67.22
-Shoptime : 15.0
-Mercadinho Estrela do : 10.94
-99* Pop 07out 23h09min : 8.9
-Mr Pretzels : 12.0
-Amazon.Com.Br Amazon D : 1.99
-Kontik Franstur : 89.7
-Nt Tirol : 33.83
-Favorito : 230.59
-Livraria : 15.0
-Arena Dunas : 5.0
-Arena Dunas : 10.0
-Pag*Carolinaduartevil : 6.0
-Uber do Brasil Tecnolo : 1.33
-Rewards - Crédito de compra apagada : -37.9
-Rewards - Crédito de compra apagada : -26.9
-Pag*Rodrigolacerdabez : 20.0
-Uber do Brasil Tecnolo : 23.32
-Pag*Levagon : 25.0
-Selfit-An : 99.9
-Selfit-An : 99.9
-Google Play Google Sto : 9.99
-Recargapay Tim : 19.5
-Rewards - Crédito de compra apagada : -37.9
-Fcia Pague Menos : 29.9
-Favorito : 19.36
-Mercado Sao Francisco : 62.38
-Mercpago : 15.0
-Cooperativa Cultural : 7.8
-Netflix.Com : 37.9
-Ponto dos : 5.83
-Google Play Google Pla : 5.56
-Iskisita : 44.98
-Mercpago : 5.0
-215 Pague Menos : 17.4
-Nordestao Lagoa Nova : 19.6
-Crédito de "Mercadopa" : -45.01
-Ebanx-Spo : 26.9
-Clubew : 81.0
-Ponto Nat : 10.49
-Nordestao Cid Jardim : 49.55
-Santa Chicoria : 126.0
-Casa do P : 11.0
-2685drogasil : 13.0
-Jose Coelho Lucas : 15.0
-Spoleto S : 45.9
-Estapar Belem : 35.0
-Sorveteria Cairu : 8.5
+Amazon.Com.Br Amazon D 1.99
+Uber do Brasil Tecnolo 12.77
+Sitepoint Premium 37.48
+Uber do Brasil Tecnolo 6.07
+Makro 84.93
+Piazzale Italia 169.95
+Cirne Pne 25.0
+Sabor do Pao 4.99
+IOF de "Sitepoint Premium" 2.39
+Habib Nat 21.6
+Uber do Brasil Tecnolo 7.0
+Chocolatr 21.0
+Medicos sem Fronteiras 30.0
+Padaria Sabor de Pao L 24.71
+Amazon.Com.Br Amazon D 21.79
+Uber do Brasil Tecnolo 6.75
+Drogasil 50.63
+Uber do Brasil Tecnolo 9.29
+Uber do Brasil Tecnolo 1.0
+Microsoft 11.45
+Supermecado Lig Zarb 17.7
+Ame Dig-A 15.0
+Mercado Sao Francisco 67.22
+Shoptime 15.0
+Mercadinho Estrela do 10.94
+99* Pop 07out 23h09min 8.9
+Mr Pretzels 12.0
+Amazon.Com.Br Amazon D 1.99
+Kontik Franstur 89.7
+Nt Tirol 33.83
+Favorito 230.59
+Livraria 15.0
+Arena Dunas 5.0
+Arena Dunas 10.0
+Pag*Carolinaduartevil 6.0
+Uber do Brasil Tecnolo 1.33
+Rewards - Crédito de compra apagada -37.9
+Rewards - Crédito de compra apagada -26.9
+Pag*Rodrigolacerdabez 20.0
+Uber do Brasil Tecnolo 23.32
+Pag*Levagon 25.0
+Selfit-An 99.9
+Selfit-An 99.9
+Google Play Google Sto 9.99
+Recargapay Tim 19.5
+Rewards - Crédito de compra apagada -37.9
+Fcia Pague Menos 29.9
+Favorito 19.36
+Mercado Sao Francisco 62.38
+Mercpago 15.0
+Cooperativa Cultural 7.8
+Netflix.Com 37.9
+Ponto dos 5.83
+Google Play Google Pla 5.56
+Iskisita 44.98
+Mercpago 5.0
+215 Pague Menos 17.4
+Nordestao Lagoa Nova 19.6
+Crédito de "Mercadopa" -45.01
+Ebanx-Spo 26.9
+Clubew 81.0
+Ponto Nat 10.49
+Nordestao Cid Jardim 49.55
+Santa Chicoria 126.0
+Casa do P 11.0
+2685drogasil 13.0
+Jose Coelho Lucas 15.0
+Spoleto S 45.9
+Estapar Belem 35.0
+Sorveteria Cairu 8.5

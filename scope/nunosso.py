@@ -14,7 +14,7 @@ for linha in analisar:
         valor = float(valor) * (-1)
 
     if '<MEMO>' in linha and '/' not in linha and 'Pagamento recebido' not in linha:
-        resultado = linha[6:-1] + ' : ' + str(valor) + '\n'
+        resultado = linha[6:-1] + ' ' + str(valor) + '\n'
         total = total + float(valor)
         linhas.write(resultado)
  
@@ -37,7 +37,7 @@ for linha in analisar:
         r_parcelas = int(qpf) - int(pqt)
         t_parcelas = r_parcelas * valor
      
-        parcelas = linha[6:-1] + ' : ' + str(valor) + ' ' +  str(t_parcelas) + '\n'
+        parcelas = linha[6:-1] + '  ' + str(valor) + ' ' +  str(t_parcelas) + '\n'
         total = total + float(valor)
         parcelado.write(parcelas) 
 
