@@ -6,36 +6,18 @@ lista = []
 
 try:
 	analisar = open('dados_pessoais.txt', 'r')
-	linha = 'a'
-	while linha:
-		linha = analisar.readline()
-
-		if  '\n' in linha:
-			dados = linha[:-1].split('#')
-			
-		else:
-			dados = linha.split('#')
-		
-		if len(dados) > 0:
-			dados[0], dados[1] = dados[1], dados[0]	
-			lista.append(dados)
-		
-	lista.sort()
-	
-	for pessoa in lista:
-		print('Nome: {:20}Cidade: {:15}CPF: {:10}  '.format(pessoa[0], pessoa[2], pessoa[1]) ) 
-	
-
-	analisar.close()
 	
     
 except FileNotFoundError:
 	print('Arquivo não existe.')
-	criar = open('dadosnovos.txt', 'w')
+	criar = open('dados_pessoais.txt', 'w')
 	while True:
-		cpf = int(input('Informe os números do CPF: '))
-		if cpf == 0:
+		cpf = input('Informe os números do CPF: ')
+		if int(cpf) == 0:
 			break
+		if len(cpf) != 11:
+			print('Digite um CPF válido, 11 dígitos')
+			continue
 		nome = input('Informe o nome: ')
 		cidade = input('Informe a cidade: ')
 		
@@ -46,6 +28,28 @@ except FileNotFoundError:
 
 
 	criar.close()	
+else:
+	linha = 'a'
+	while linha:
+		linha = analisar.readline()
+
+		if  '\n' in linha:
+			dados = linha[:-1].split('#')
+			
+		else:
+			dados = linha.split('#')
+		
+		if len(dados) > 1:
+			dados[0], dados[1] = dados[1], dados[0]	
+			lista.append(dados)
+
+	analisar.close()	
+	lista.sort()
+	
+	for pessoa in lista:
+		string_cpf = pessoa[1][:3]+ '.' + pessoa[1][3:6] + '.' + pessoa[1][6:9] + '-' + pessoa[1][9:12]
+		print('Nome: {:20}Cidade: {:15}CPF: {:10}  '.format(pessoa[0], pessoa[2], string_cpf) ) 
+	
 
 
 
