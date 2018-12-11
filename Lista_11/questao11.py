@@ -1,6 +1,6 @@
 import os
 
-os.system('cls')
+os.system('clear')
 
 def media_notas(nota_1, nota_2, nota_3, nota_4):
     media = (float(nota_1) + float(nota_2) + float(nota_3) + float(nota_4)) / 4
@@ -16,15 +16,6 @@ def situacao(media):
 def str_cpf(cpf):
     string_cpf = cpf[:3]+ '.' + cpf[3:6] + '.' + cpf[6:9] + '-' + cpf[9:12]
     return string_cpf
-
-def tomadaDeDados(tipo):
-    inputs = {
-        nota1: 'Informe a primeira nota do aluno:',
-        nota2 : 'Informe a segunda nota do aluno:'
-    }
-    
-    input(inputs[tipo][0])
-
 
 try:
 	analisar = open('dados_alunos.txt', 'r')
