@@ -17,6 +17,14 @@ def str_cpf(cpf):
     string_cpf = cpf[:3]+ '.' + cpf[3:6] + '.' + cpf[6:9] + '-' + cpf[9:12]
     return string_cpf
 
+def tomadaDeDados(tipo):
+    inputs = {
+        nota1: 'Informe a primeira nota do aluno:',
+        nota2 : 'Informe a segunda nota do aluno:'
+    }
+    
+    input(inputs[tipo][0])
+
 
 try:
 	analisar = open('dados_alunos.txt', 'r')
