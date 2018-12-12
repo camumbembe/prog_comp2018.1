@@ -1,6 +1,5 @@
 import os
 os.system('clear')
-
 lista = []
 
 
@@ -35,7 +34,7 @@ else:
     for linha in analisar:
         if  '\n' in linha:
             dados = linha[:-1].split('-')
-            
+
         else:
             dados = linha.split('-')
             
