@@ -59,7 +59,8 @@ except FileNotFoundError:
 
     while True:
         try:
-            cpf = input('Informe os números do CPF: ')
+            cpf = input('Informe os números do CPF: ').upper()
+
             if cpf == 'EXIT':
                 break
             cpf = int(cpf)
