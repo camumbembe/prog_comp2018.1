@@ -27,7 +27,7 @@ except FileNotFoundError:
         try:
             cpf = int(input('Informe os números do CPF: '))
         except ValueError:
-            print('O CPF deve ser composto apenas de números.')
+            print('O CPF deve ser composto apenas de numeros.')
             continue
         else:
             if int(cpf) == 0:
@@ -43,11 +43,11 @@ except FileNotFoundError:
                     nota3 = float(input('Informe a terceira nota do aluno: '))
                     nota4 = float(input('Informe a quarta nota do aluno: '))
                 except ValueError:
-                    print('As notas devem ser compostas por números inteiros e/ou decimais.')
+                    print('As notas devem ser compostas por numeros inteiros e/ou decimais, maiores que zero.')
                     continue
                 else:
                     if nota1 < 0 or nota2 < 0 or nota3 < 0 or nota4 < 0:
-                        print('As notas devem ser compostas por números positivos.')
+                        print('As notas devem ser compostas por numeros inteiros e/ou decimais, maiores que zero.')
                         continue
                     break
 
