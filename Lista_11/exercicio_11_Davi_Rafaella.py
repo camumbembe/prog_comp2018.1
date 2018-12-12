@@ -1,6 +1,6 @@
 import os
 
-os.system('cls')
+os.system('clear')
 
 def media_notas(nota_1, nota_2, nota_3, nota_4):
     media = (float(nota_1) + float(nota_2) + float(nota_3) + float(nota_4)) / 4
