@@ -1,12 +1,5 @@
-def validarDados(dadoObtido, tipoDeDado):
-	if dadoObtido == 'cpf':
-		if int(dadoObtido) == 0:
-			return False
-		if len(dadoObtido) != 11:
-			print('Digite um CPF válido, 11 dígitos')
-			tomadaDeDados(dados)
-		return dadoObtido
-
+def validarDados(dadoObtido):
+    
 
 def tomadaDeDados(dados):
     inputSolicitado = {
@@ -17,8 +10,15 @@ def tomadaDeDados(dados):
         'cpf' : ['Informe os números do CPF: ']
     }
     try:
-        tomada = float(input(inputSolicitado[dados][0]))
-        validarDados(tomada, dados)
+        while True:
+            tomada = float(input(inputSolicitado[dados][0]))
+            if dados == 'cpf':
+                if int(tomada) == 0:
+                    return False
+                if len(tomada) != 11:
+                    print('Digite um CPF válido, 11 dígitos')
+                    continue
+            return tomada
 
     except:
         print('Digite um número válido')
