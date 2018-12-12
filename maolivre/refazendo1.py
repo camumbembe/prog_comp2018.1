@@ -48,5 +48,4 @@ else:
         string_cpf = pessoa[1][:3]+ '.' + pessoa[1][3:6] + '.' + pessoa[1][6:9] + '-' + pessoa[1][9:12]
         diferenca = int(pessoa[3]) - int(pessoa[4])
         print('Nome: {:20}Cidade: {:15}CPF: {:19}Devendo: {:9}Pago: {:5}Diferença: {:5} '.format(pessoa[0], pessoa[2], string_cpf, pessoa[3], pessoa[4], diferenca) ) 
-	
-analisar.close()
+    analisar.close()

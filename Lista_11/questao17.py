@@ -25,15 +25,13 @@ except FileNotFoundError:
 
     while True:
         try:
-            cpf = input('Informe os números do CPF: ')
-            if cpf == 'EXIT':
-                break
-            cpf = int(cpf)
+            cpf = int(input('Informe os números do CPF: '))
         except ValueError:
             print('O CPF deve ser composto apenas de números.')
             continue
         else:
-            
+            if int(cpf) == 0:
+                break
             if len(str(cpf)) != 11:
                 print('Digite um CPF válido, 11 dígitos')
                 continue
