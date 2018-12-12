@@ -24,29 +24,34 @@ except FileNotFoundError:
     criar = open('dados_alunos.txt', 'w')
 
     while True:
-        cpf = input('Informe os números do CPF: ')
-        if int(cpf) == 0:
-            break
-        if len(cpf) != 11:
-            print('Digite um CPF válido, 11 dígitos')
+        try:
+            cpf = int(input('Informe os números do CPF: '))
+        except ValueError:
+            print('O CPF deve ser composto apenas de numeros.')
             continue
-        nome = input('Informe o nome do aluno: ')
-        while True:
-            try:
-                nota1 = float(input('Informe a primeira nota do aluno: '))
-                nota2 = float(input('Informe a segunda nota do aluno: '))
-                nota3 = float(input('Informe a terceira nota do aluno: '))
-                nota4 = float(input('Informe a quarta nota do aluno: '))
-            except ValueError:
-                print('As notas devem ser compostas por numeros inteiros e/ou decimais, maiores que zero.')
+        else:
+            if int(cpf) == 0:
+                break
+            if len(str(cpf)) != 11:
+                print('Digite um CPF válido, 11 dígitos')
                 continue
-            else:
-                if nota1 < 0 or nota2 < 0 or nota3 < 0 or nota4 < 0:
+            nome = input('Informe o nome do aluno: ')
+            while True:
+                try:
+                    nota1 = float(input('Informe a primeira nota do aluno: '))
+                    nota2 = float(input('Informe a segunda nota do aluno: '))
+                    nota3 = float(input('Informe a terceira nota do aluno: '))
+                    nota4 = float(input('Informe a quarta nota do aluno: '))
+                except ValueError:
                     print('As notas devem ser compostas por numeros inteiros e/ou decimais, maiores que zero.')
                     continue
-                break
+                else:
+                    if nota1 < 0 or nota2 < 0 or nota3 < 0 or nota4 < 0:
+                        print('As notas devem ser compostas por numeros inteiros e/ou decimais, maiores que zero.')
+                        continue
+                    break
 
-        texto_arquivo = cpf + ';' + nome + ';' + str(nota1) + ';' + str(nota2) + ';' + str(nota3) +  ';' + str(nota4) + '\n'			
+        texto_arquivo = str(cpf) + ';' + nome + ';' + str(nota1) + ';' + str(nota2) + ';' + str(nota3) +  ';' + str(nota4) + '\n'			
         criar.write(texto_arquivo)
     criar.close()	
 else:
