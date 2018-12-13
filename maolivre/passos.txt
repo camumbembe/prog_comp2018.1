@@ -28,6 +28,7 @@
     - salvar em uma variável o conteúdo da linha (exemplificado acima, salvo em nomes e nomes_noarquivo);
 
 3º passo:
+    -ainda dentro do while;
     - usar a variável acima para separar em uma lista o conteúdo da linha ( o que era uma string única passará a ser uma lista com strings);
     - split() é o método que separa a string da variável em uma lista de strings, o separador será informado;
 
@@ -43,6 +44,7 @@
         if  '\n' in nomes:
             nomes = nomes[:-1]
     - a última linha não tem um '\n' por isso usamos o if para remover o último caractér somente quando necessário;
+    
 
 5º passo:
     - a cada interação do laço os dados são perdidos, é necessário salvar esses dadosde alguma maneira (lista, dicionário ...) para no fim do laço termos todas as informações;
@@ -55,14 +57,16 @@
             lista_dados.append(lista_nomes)
 
 6º passo:
-    - orderna lista, usando .sort(), essew método ordena de acordo com a primeira posição da lista;
-    - por isso o elemento que desejamos que seja nosso parâmetro de ordenação não estiver na primeira posição será necessário colocá-lo nesta;
+    - ordernar a lista, usando .sort(), esse método ordena de acordo com a primeira posição da lista;
+    - por isso se o elemento que desejamos que seja nosso parâmetro de ordenação não estiver na primeira posição será necessário colocá-lo nesta;
     ex:
         lista_nomes[0], lista_nomes[1] = lista_nomes[1], lista_nomes[0]
     - depois dessa reordenação basta usar o método;
 
     ex:
         lista_dados.sort()
+    - a ordenação vai dentro do if que verifica se há o comprimento suficiente na lista que estamos verificando
+    - se estamos trabalhando com duas listas (lista com os elementos e a lista geral, como todas as listas, faremos essa ordenação na lista de elementos, depois o sort será dado na lista geral)
 
 7º passo:
     - impressão: para que consigamos imprimir todas as informações dentro da lista (de listas), usaremos um laço;
@@ -77,7 +81,7 @@
     - usaremos o try e except, colocaremos o try no arquivo inicial,  os resto do código no else (executado depois do try) e o novo bloco de código no except;
 
 9º passo:
-    - criar o novo arquivo dentro do except;
+    - criar o novo arquivo dentro do except, no modo 'w';
 
 10º passo:
     - para escrever os dados no arquivo, até que se tenha a quantidade desejada, usaremos um laço, nesse caso o while;
@@ -97,7 +101,19 @@
     - as informações a serem adicionadas estarão atribuídas a uma variável e será essa variável que estará no .write;
     - desta forma, a cada interação será adicionado no  arquivo as informações inseridas;
 
-    
+
+
+12º passo: verificação
+    - para imprimir os dados de acordo com um input, utilizaremos um for;
+    - nesse laço, colocaremos a lista principal e verificaremos se o input é igual a posicao que vamos verificar;
+    ex:
+        verificando = input('Informe um CPF para acessar as informações: ')
+        for numero in lista_dados:
+            if verificando == numero[1]:
+                print()
+    - no caso acima foi o cpf o verificador, mas vale para qualquer informação, o que vai mudar é a posição que será checada se é igual ao input ou não, a partir daí o que será impresso é de acordo com o que foi pedido;
+
+
 
 
 
