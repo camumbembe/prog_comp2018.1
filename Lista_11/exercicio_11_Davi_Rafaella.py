@@ -1,4 +1,5 @@
 import os
+from collections import OrderedDict
 
 os.system('clear')
 
@@ -7,8 +8,10 @@ def media_notas(nota_1, nota_2, nota_3, nota_4):
     return round(media,1)
 
 def situacao(media):
-    if media >= 5:
+    if media >= 6:
         return 'Aprovado'
+    elif media >= 2:
+        return 'Recuperação'
     else:
         return 'Reprovado'
 
@@ -26,13 +29,12 @@ def imprimirDados(analisar):
         if len(dados) > 1:   	
             dicionario[dados[0]] = [dados[1], dados[2],dados[3],dados[4],dados[5]]
     analisar.close()
-    dici_tuple = sorted(dicionario.items(), key=lambda x: x[1])
-    print(dici_tuple)       
-    for aluno in dici_tuple:
-        media_aluno = media_notas(aluno[1][1], aluno[1][2], aluno[1][3],aluno[1][4])
+    dicionarioOrdenado = OrderedDict(sorted(dicionario.items(), key=lambda x: x[1]))
+    for aluno in dicionarioOrdenado:
+        media_aluno = media_notas(dicionarioOrdenado[aluno][1],dicionarioOrdenado[aluno][2],dicionarioOrdenado[aluno][3],dicionarioOrdenado[aluno][4])
         print('Nome: {:15}CPF: {:19}Média: {:7}Situação: {:5}'.format(
-        aluno[1][0], 
-        str_cpf(aluno[0]), 
+        dicionarioOrdenado[aluno][0], 
+        str_cpf(aluno), 
         str(media_aluno), 
         situacao(media_aluno)
         )) 
@@ -66,14 +68,14 @@ except FileNotFoundError:
                 break
             cpf = int(cpf)
         except ValueError:
-            print('O CPF deve ser composto apenas de números.')
+            print('O CPF deve conter apenas números.')
             continue
         else:
             
             if len(str(cpf)) != 11:
                 print('Digite um CPF válido, 11 dígitos')
                 continue
-            nome = input('Informe o nome do aluno: ')
+            nome = input('Informe o nome do aluno: ').title()
             while True:
                 try:
                     nota1 = float(input('Informe a primeira nota do aluno: '))

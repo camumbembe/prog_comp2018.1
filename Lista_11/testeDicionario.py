@@ -10,6 +10,8 @@ d = {
 for oque in d:
     print(oque)
 
+
+
 dd = OrderedDict(sorted(d.items(), key=lambda x: x[1]))
 
 
