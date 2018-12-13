@@ -1,0 +1,106 @@
+1º passo:
+
+    - abrir o arquivo: nome = open('nomedoarquivo', 'modo')
+    - para verificar se está 'funcionando' pode usar um for, e dentro dele um print(para cada linha):
+
+    ex: 
+
+        for linha in nome:
+            print(linha)
+
+    ex 2: 
+
+        while True:
+            nomes_noarquivo = nome.readline()
+            print(nomes)
+            if nomes_noarquivo == '':
+                break
+
+    ex 3: 
+
+        nomes = 'a'
+        while nomes:
+            nomes = arquivoSupers.readline()
+            print(nomes)
+    
+2º passo:
+    - acessar cada linha do arquivo (com readline ou for), como mostrado nos exemplos acima;
+    - salvar em uma variável o conteúdo da linha (exemplificado acima, salvo em nomes e nomes_noarquivo);
+
+3º passo:
+    - usar a variável acima para separar em uma lista o conteúdo da linha ( o que era uma string única passará a ser uma lista com strings);
+    - split() é o método que separa a string da variável em uma lista de strings, o separador será informado;
+
+    ex:
+        lista_nomes = nomes.split('#')
+    - imprimir o resultado do split para verificar se está correto;
+
+4º passo: 
+    -no resultado vai aparecer um '\n'(decorrência do pulo de linhas), será necessário tratar isso;
+    - para eliminar o '\n' podemos usar um if, como apresentado no exemplo abaixo:
+
+    ex: 
+        if  '\n' in nomes:
+            nomes = nomes[:-1]
+    - a última linha não tem um '\n' por isso usamos o if para remover o último caractér somente quando necessário;
+
+5º passo:
+    - a cada interação do laço os dados são perdidos, é necessário salvar esses dadosde alguma maneira (lista, dicionário ...) para no fim do laço termos todas as informações;
+    - para tanto usaremos a função .append();
+    - o readline() acrescenta até mesmo a linha vazia do fim do arquivo, por isso faremos uma verificação de lista vazia para, se for o caso, evitar seu acréscimo;
+    - essa verificação evita erros futuros;
+
+    ex:
+        if lista_nomes != ['']:
+            lista_dados.append(lista_nomes)
+
+6º passo:
+    - orderna lista, usando .sort(), essew método ordena de acordo com a primeira posição da lista;
+    - por isso o elemento que desejamos que seja nosso parâmetro de ordenação não estiver na primeira posição será necessário colocá-lo nesta;
+    ex:
+        lista_nomes[0], lista_nomes[1] = lista_nomes[1], lista_nomes[0]
+    - depois dessa reordenação basta usar o método;
+
+    ex:
+        lista_dados.sort()
+
+7º passo:
+    - impressão: para que consigamos imprimir todas as informações dentro da lista (de listas), usaremos um laço;
+    - nesse caso usaremos o for, que irá varrer a lista, do conjunto de listas, e usaremos posições para acessar cada elemento;
+     
+    ex:
+        for dados in lista_dados:
+            print('Nome: {:15}Cidade: {:15}CPF: {:10}'.format((dados[0]), (dados[2]), (dados[1])))
+    
+8º passo:
+    - o próximo passo é criar um arquivo novo, no modo 'write' caso o arquivo informado não exista;
+    - usaremos o try e except, colocaremos o try no arquivo inicial,  os resto do código no else (executado depois do try) e o novo bloco de código no except;
+
+9º passo:
+    - criar o novo arquivo dentro do except;
+
+10º passo:
+    - para escrever os dados no arquivo, até que se tenha a quantidade desejada, usaremos um laço, nesse caso o while;
+    - nesse caso específico a condição de parada será uma das informações igual a zero(0), momento no qual adicionaremos um break;
+    
+11º passo:
+    - para que as informações adicionadas entrem no arquivo usaremos o write;
+    ex: 
+        while True:
+            cpf_pessoa = int(input('Informe o CPF: '))
+            if cpf_pessoa == 0:
+                break
+            nome_pessoa = input('Informe o nome a ser adicionado a lista: ')
+            cidade_pessoa = input('Informe a cidade: ')
+            conteudo = str(cpf_pessoa) + '#' + nome_pessoa + '#' + cidade_pessoa + '\n'
+            arquivoNovo.write(conteudo)
+    - as informações a serem adicionadas estarão atribuídas a uma variável e será essa variável que estará no .write;
+    - desta forma, a cada interação será adicionado no  arquivo as informações inseridas;
+
+    
+
+
+
+
+
+
