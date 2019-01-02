@@ -1,0 +1,5 @@
+Combustível: GASOLINA C COMUM   Preço médio: 7.36      Qtd de postos: 179      
+Combustível: ETANOL             Preço médio: 3.29      Qtd de postos: 134      
+Combustível: DIESEL S500        Preço médio: 3.59      Qtd de postos: 123      
+Combustível: DIESEL S10         Preço médio: 3.68      Qtd de postos: 164      
+Combustível: GNV                Preço médio: 2.74      Qtd de postos: 14       
